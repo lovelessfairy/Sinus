@@ -1,0 +1,27 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+def plot_sine_wave():
+    x = np.linspace(0, 2*np.pi, 100)
+    y = np.sin(x)
+    plt.plot(x, y)
+    plt.xlabel('x')
+    plt.ylabel('sin(x)')
+    plt.title('Sine Wave')
+    plt.show()
+
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+    
+    def calculate_area(self):
+        return np.pi * self.radius**2
+
+if __name__ == "__main__":
+    # Построение синусоидальной волны
+    plot_sine_wave()
+
+    # Создание объекта Circle и вычисление площади круга
+    circle = Circle(5)
+    area = circle.calculate_area()
+    print("Circle area:", area)
